@@ -7,23 +7,23 @@ services:
       - document_root:/app
     ports:
       - "5000:5000"
-      - "2222:22"
+      - "2223:22"
     networks:
       - dev
     depends_on:
       - postgres
     environment:
       POSTGRES_HOST: postgres
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydb
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: developer
+      POSTGRES_DB: developer
 
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydb
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: developer
+      POSTGRES_DB: developer
     volumes:
       - dbdata:/var/lib/postgresql/data
     networks:
@@ -35,7 +35,7 @@ services:
       - document_root:/workspace
     ports:
       - "5901:5901"
-      - "2223:22"
+      - "2224:22"
     networks:
       - dev
     depends_on:
