@@ -22,7 +22,7 @@ docker build -t developer-env .
 ## 🚀 3️⃣ Run the Container
 Now, start the container with the appropriate exposed ports:
 ```bash
-docker run -dit -p 5900:5900 -p 2223:22 --name dev-container developer-env
+docker run -dit -p 5900:5900 -p 2224:22 --name dev-container developer-env
 ```
 ### 📌 Explanation of the parameters:
 
@@ -39,7 +39,7 @@ To use the graphical environment, connect via VNC Viewer using:
 ## 🔑 5️⃣ Connect to the Container via SSH
 The container also includes an SSH server. You can connect using:
 ```bash
-ssh developer@localhost -p 2223
+ssh developer@localhost -p 2224
 ```
 📌 Default password: developerpassword
 ## 📌 Notes
